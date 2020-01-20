@@ -3,27 +3,47 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0AC7CD2D23D4ADBC0093EC26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7CD2C23D4ADBC0093EC26 /* AppDelegate.swift */; };
 		0AC7CD2F23D4ADBC0093EC26 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7CD2E23D4ADBC0093EC26 /* SceneDelegate.swift */; };
-		0AC7CD3123D4ADBC0093EC26 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7CD3023D4ADBC0093EC26 /* ViewController.swift */; };
+		0AC7CD3123D4ADBC0093EC26 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7CD3023D4ADBC0093EC26 /* AboutViewController.swift */; };
 		0AC7CD3423D4ADBC0093EC26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AC7CD3223D4ADBC0093EC26 /* Main.storyboard */; };
 		0AC7CD3623D4ADC20093EC26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AC7CD3523D4ADC20093EC26 /* Assets.xcassets */; };
 		0AC7CD3923D4ADC20093EC26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AC7CD3723D4ADC20093EC26 /* LaunchScreen.storyboard */; };
+		0AC7CD4623D4B4EB0093EC26 /* DeviceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7CD4523D4B4EB0093EC26 /* DeviceListViewController.swift */; };
+		0AC7CD4923D4B59A0093EC26 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7CD4823D4B59A0093EC26 /* R.generated.swift */; };
+		0AC7CD4D23D4B6430093EC26 /* AddDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7CD4C23D4B6430093EC26 /* AddDeviceViewController.swift */; };
+		0AC7CD4F23D4B6570093EC26 /* DeviceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7CD4E23D4B6570093EC26 /* DeviceListViewModel.swift */; };
+		0AC7CD5123D4B6620093EC26 /* AddDeviceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7CD5023D4B6620093EC26 /* AddDeviceViewModel.swift */; };
+		0AC7CD5323D4B7370093EC26 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7CD5223D4B7370093EC26 /* Device.swift */; };
+		0AC7CD5523D4B7EA0093EC26 /* DeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7CD5423D4B7EA0093EC26 /* DeviceCell.swift */; };
+		0AC7CD5723D4B8B30093EC26 /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7CD5623D4B8B30093EC26 /* DeviceManager.swift */; };
+		43FCB5AB8FFA4833102E31C6 /* Pods_TrackerMonitor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D774A3B25F1FF5D847AE7DC /* Pods_TrackerMonitor.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0AC7CD2923D4ADBC0093EC26 /* TrackerMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackerMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AC7CD2C23D4ADBC0093EC26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AC7CD2E23D4ADBC0093EC26 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0AC7CD3023D4ADBC0093EC26 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0AC7CD3023D4ADBC0093EC26 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		0AC7CD3323D4ADBC0093EC26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0AC7CD3523D4ADC20093EC26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AC7CD3823D4ADC20093EC26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0AC7CD3A23D4ADC20093EC26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AC7CD4523D4B4EB0093EC26 /* DeviceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListViewController.swift; sourceTree = "<group>"; };
+		0AC7CD4823D4B59A0093EC26 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		0AC7CD4C23D4B6430093EC26 /* AddDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceViewController.swift; sourceTree = "<group>"; };
+		0AC7CD4E23D4B6570093EC26 /* DeviceListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListViewModel.swift; sourceTree = "<group>"; };
+		0AC7CD5023D4B6620093EC26 /* AddDeviceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceViewModel.swift; sourceTree = "<group>"; };
+		0AC7CD5223D4B7370093EC26 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		0AC7CD5423D4B7EA0093EC26 /* DeviceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceCell.swift; sourceTree = "<group>"; };
+		0AC7CD5623D4B8B30093EC26 /* DeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceManager.swift; sourceTree = "<group>"; };
+		1D774A3B25F1FF5D847AE7DC /* Pods_TrackerMonitor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrackerMonitor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		22174812871E3D7261138317 /* Pods-TrackerMonitor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrackerMonitor.debug.xcconfig"; path = "Target Support Files/Pods-TrackerMonitor/Pods-TrackerMonitor.debug.xcconfig"; sourceTree = "<group>"; };
+		F0705471407CEDEA66A57DB8 /* Pods-TrackerMonitor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrackerMonitor.release.xcconfig"; path = "Target Support Files/Pods-TrackerMonitor/Pods-TrackerMonitor.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43FCB5AB8FFA4833102E31C6 /* Pods_TrackerMonitor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +63,8 @@
 			children = (
 				0AC7CD2B23D4ADBC0093EC26 /* TrackerMonitor */,
 				0AC7CD2A23D4ADBC0093EC26 /* Products */,
+				859785239B6EF91DDF9D09DE /* Pods */,
+				8A9945C934F892BF29EC5862 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +79,96 @@
 		0AC7CD2B23D4ADBC0093EC26 /* TrackerMonitor */ = {
 			isa = PBXGroup;
 			children = (
-				0AC7CD2C23D4ADBC0093EC26 /* AppDelegate.swift */,
-				0AC7CD2E23D4ADBC0093EC26 /* SceneDelegate.swift */,
-				0AC7CD3023D4ADBC0093EC26 /* ViewController.swift */,
-				0AC7CD3223D4ADBC0093EC26 /* Main.storyboard */,
-				0AC7CD3523D4ADC20093EC26 /* Assets.xcassets */,
-				0AC7CD3723D4ADC20093EC26 /* LaunchScreen.storyboard */,
-				0AC7CD3A23D4ADC20093EC26 /* Info.plist */,
+				0AC7CD4423D4B3830093EC26 /* Vendors */,
+				0AC7CD4323D4B37D0093EC26 /* Core */,
+				0AC7CD4123D4B3490093EC26 /* UI */,
+				0AC7CD4223D4B35F0093EC26 /* Resources */,
+				0AC7CD4023D4B3380093EC26 /* Support */,
 			);
 			path = TrackerMonitor;
+			sourceTree = "<group>";
+		};
+		0AC7CD4023D4B3380093EC26 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				0AC7CD2E23D4ADBC0093EC26 /* SceneDelegate.swift */,
+				0AC7CD4823D4B59A0093EC26 /* R.generated.swift */,
+				0AC7CD2C23D4ADBC0093EC26 /* AppDelegate.swift */,
+				0AC7CD3A23D4ADC20093EC26 /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		0AC7CD4123D4B3490093EC26 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				0AC7CD3223D4ADBC0093EC26 /* Main.storyboard */,
+				0AC7CD4B23D4B6210093EC26 /* About */,
+				0AC7CD4A23D4B5E10093EC26 /* DeviceList */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		0AC7CD4223D4B35F0093EC26 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0AC7CD3523D4ADC20093EC26 /* Assets.xcassets */,
+				0AC7CD3723D4ADC20093EC26 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0AC7CD4323D4B37D0093EC26 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				0AC7CD5223D4B7370093EC26 /* Device.swift */,
+				0AC7CD5623D4B8B30093EC26 /* DeviceManager.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		0AC7CD4423D4B3830093EC26 /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Vendors;
+			sourceTree = "<group>";
+		};
+		0AC7CD4A23D4B5E10093EC26 /* DeviceList */ = {
+			isa = PBXGroup;
+			children = (
+				0AC7CD4523D4B4EB0093EC26 /* DeviceListViewController.swift */,
+				0AC7CD4E23D4B6570093EC26 /* DeviceListViewModel.swift */,
+				0AC7CD5423D4B7EA0093EC26 /* DeviceCell.swift */,
+				0AC7CD4C23D4B6430093EC26 /* AddDeviceViewController.swift */,
+				0AC7CD5023D4B6620093EC26 /* AddDeviceViewModel.swift */,
+			);
+			path = DeviceList;
+			sourceTree = "<group>";
+		};
+		0AC7CD4B23D4B6210093EC26 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				0AC7CD3023D4ADBC0093EC26 /* AboutViewController.swift */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		859785239B6EF91DDF9D09DE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				22174812871E3D7261138317 /* Pods-TrackerMonitor.debug.xcconfig */,
+				F0705471407CEDEA66A57DB8 /* Pods-TrackerMonitor.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8A9945C934F892BF29EC5862 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D774A3B25F1FF5D847AE7DC /* Pods_TrackerMonitor.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +178,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0AC7CD3D23D4ADC20093EC26 /* Build configuration list for PBXNativeTarget "TrackerMonitor" */;
 			buildPhases = (
+				F21A4A8E7F2708B3ACC5F7F3 /* [CP] Check Pods Manifest.lock */,
+				0AC7CD4723D4B5160093EC26 /* ShellScript */,
 				0AC7CD2523D4ADBC0093EC26 /* Sources */,
 				0AC7CD2623D4ADBC0093EC26 /* Frameworks */,
 				0AC7CD2723D4ADBC0093EC26 /* Resources */,
+				5F86DC7FF833A8C4598733AE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,13 +240,82 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0AC7CD4723D4B5160093EC26 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/TrackerMonitor/Support/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/TrackerMonitor/Support/R.generated.swift\"\n";
+		};
+		5F86DC7FF833A8C4598733AE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TrackerMonitor/Pods-TrackerMonitor-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TrackerMonitor/Pods-TrackerMonitor-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TrackerMonitor/Pods-TrackerMonitor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F21A4A8E7F2708B3ACC5F7F3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TrackerMonitor-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0AC7CD2523D4ADBC0093EC26 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AC7CD3123D4ADBC0093EC26 /* ViewController.swift in Sources */,
+				0AC7CD5123D4B6620093EC26 /* AddDeviceViewModel.swift in Sources */,
+				0AC7CD4623D4B4EB0093EC26 /* DeviceListViewController.swift in Sources */,
+				0AC7CD3123D4ADBC0093EC26 /* AboutViewController.swift in Sources */,
+				0AC7CD5723D4B8B30093EC26 /* DeviceManager.swift in Sources */,
+				0AC7CD5523D4B7EA0093EC26 /* DeviceCell.swift in Sources */,
+				0AC7CD5323D4B7370093EC26 /* Device.swift in Sources */,
+				0AC7CD4923D4B59A0093EC26 /* R.generated.swift in Sources */,
+				0AC7CD4F23D4B6570093EC26 /* DeviceListViewModel.swift in Sources */,
 				0AC7CD2D23D4ADBC0093EC26 /* AppDelegate.swift in Sources */,
+				0AC7CD4D23D4B6430093EC26 /* AddDeviceViewController.swift in Sources */,
 				0AC7CD2F23D4ADBC0093EC26 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,11 +458,12 @@
 		};
 		0AC7CD3E23D4ADC20093EC26 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22174812871E3D7261138317 /* Pods-TrackerMonitor.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5K42YC37US;
-				INFOPLIST_FILE = TrackerMonitor/Info.plist;
+				INFOPLIST_FILE = TrackerMonitor/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,11 +477,12 @@
 		};
 		0AC7CD3F23D4ADC20093EC26 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0705471407CEDEA66A57DB8 /* Pods-TrackerMonitor.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5K42YC37US;
-				INFOPLIST_FILE = TrackerMonitor/Info.plist;
+				INFOPLIST_FILE = TrackerMonitor/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
