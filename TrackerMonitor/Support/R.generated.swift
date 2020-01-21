@@ -83,19 +83,34 @@ struct _R: Rswift.Validatable {
     }
     
     struct main: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
-      typealias InitialController = UIKit.UITabBarController
+      typealias InitialController = MainViewController
       
       let aboutViewController = StoryboardViewControllerResource<AboutViewController>(identifier: "AboutViewController")
+      let addDeviceViewController = StoryboardViewControllerResource<AddDeviceViewController>(identifier: "AddDeviceViewController")
       let bundle = R.hostingBundle
       let deviceListViewController = StoryboardViewControllerResource<DeviceListViewController>(identifier: "DeviceListViewController")
+      let deviceViewController = StoryboardViewControllerResource<DeviceViewController>(identifier: "DeviceViewController")
+      let mainViewController = StoryboardViewControllerResource<MainViewController>(identifier: "MainViewController")
       let name = "Main"
       
       func aboutViewController(_: Void = ()) -> AboutViewController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: aboutViewController)
       }
       
+      func addDeviceViewController(_: Void = ()) -> AddDeviceViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: addDeviceViewController)
+      }
+      
       func deviceListViewController(_: Void = ()) -> DeviceListViewController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: deviceListViewController)
+      }
+      
+      func deviceViewController(_: Void = ()) -> DeviceViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: deviceViewController)
+      }
+      
+      func mainViewController(_: Void = ()) -> MainViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: mainViewController)
       }
       
       static func validate() throws {
@@ -104,7 +119,10 @@ struct _R: Rswift.Validatable {
         if #available(iOS 11.0, *) {
         }
         if _R.storyboard.main().aboutViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'aboutViewController' could not be loaded from storyboard 'Main' as 'AboutViewController'.") }
+        if _R.storyboard.main().addDeviceViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'addDeviceViewController' could not be loaded from storyboard 'Main' as 'AddDeviceViewController'.") }
         if _R.storyboard.main().deviceListViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'deviceListViewController' could not be loaded from storyboard 'Main' as 'DeviceListViewController'.") }
+        if _R.storyboard.main().deviceViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'deviceViewController' could not be loaded from storyboard 'Main' as 'DeviceViewController'.") }
+        if _R.storyboard.main().mainViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'mainViewController' could not be loaded from storyboard 'Main' as 'MainViewController'.") }
       }
       
       fileprivate init() {}

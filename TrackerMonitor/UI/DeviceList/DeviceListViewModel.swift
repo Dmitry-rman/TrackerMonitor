@@ -11,8 +11,12 @@ import Bond
 
 class DeviceListViewModel{
     
-    let devices = Observable<[Device]>([])
     let isBusy = Observable<Bool>(false)
+    let devices = DeviceManager.sharedInstance.devices
+    
+    var deviceCount: Int{
+        return devices.value.count
+    }
     
     init() {
         refresh(completion: nil)
@@ -22,8 +26,13 @@ class DeviceListViewModel{
         self.isBusy.value = true
         DeviceManager.sharedInstance.updateList { [weak self] (results) in
                    self?.isBusy.value = false
-                   self?.devices.value = results
                    completion?(true)
                }
+    }
+    
+    func removeDevice(index: Int){
+        
+        let device = DeviceManager.sharedInstance.devices.value[index]
+        _ = DeviceManager.sharedInstance.removeDevice(device: device)
     }
 }
