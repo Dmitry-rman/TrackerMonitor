@@ -66,7 +66,7 @@ class DeviceManager{
         let url = URL.init(string: "http://" + idAdress)!.appendingPathComponent("usageData")
         Alamofire.request(url,
                             method: .get,
-              headers: nil).responseJSON { response in
+              headers: nil).responseJSON { [weak self] response in
                 if response.result.isSuccess == true,
                     let result = response.result.value as? Dictionary<String, Any> {
                     
@@ -80,6 +80,15 @@ class DeviceManager{
                         if let device = try? JSONDecoder.init().decode( Device.self, from: deviceData){
                             
                             device.ipAddress = response.request?.url?.host
+                            if let index = self?.devices.value.lastIndex(where: { (aDevice) -> Bool in
+                                return aDevice.ipAddress == device.ipAddress
+                            }) {
+                               self?.devices.value.remove(at: index)
+                               self?.devices.value.insert(device, at: index)
+                            }else{
+                                self?.devices.value.append(device)
+                            }
+                            
                             completion?(device, nil)
                         }
                         else{
@@ -94,23 +103,18 @@ class DeviceManager{
     
     func updateList(completion: ((_ devices:[Device])->())?){
       
-        var tmpDevices: Array<Device> = []
         let requestGroup = DispatchGroup()
         
         _deviceIPs.forEach { (deviceIP) in
 
             requestGroup.enter()
             self.getDevice(idAdress: deviceIP) { (device, message) in
-                if device != nil {
-                    tmpDevices.append(device!)
-                }
                  requestGroup.leave()
             }
         }
         
         requestGroup.notify(queue: DispatchQueue.main) { [weak self] in
-            self?.devices.value = tmpDevices
-            completion?(tmpDevices)
+            completion?(self?.devices.value ?? [])
         }
         
     }

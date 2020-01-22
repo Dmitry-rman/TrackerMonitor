@@ -102,7 +102,7 @@ class DeviceListViewController: UIViewController, UITableViewDelegate, UITableVi
         let deviceController = segue.destination as? DeviceViewController
         if let row = tableView.indexPathForSelectedRow?.row{
            let device = viewModel.devices.value[row]
-           deviceController?.device = device
+               deviceController?.viewModel = DeviceViewModel.init(device: device)
         }
     }
 

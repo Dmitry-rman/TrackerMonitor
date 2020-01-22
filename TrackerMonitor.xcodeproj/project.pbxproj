@@ -25,6 +25,18 @@
 		0AC7CD5F23D734730093EC26 /* UIAlertController+Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7CD5E23D734720093EC26 /* UIAlertController+Show.swift */; };
 		0AC7CD6123D734840093EC26 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7CD6023D734840093EC26 /* RootViewController.swift */; };
 		0AC7CD6323D734C70093EC26 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7CD6223D734C70093EC26 /* MainViewController.swift */; };
+		0AC7CD6F23D856E20093EC26 /* TableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7CD6523D856E20093EC26 /* TableRow.swift */; };
+		0AC7CD7023D856E20093EC26 /* TableCellRegisterer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7CD6623D856E20093EC26 /* TableCellRegisterer.swift */; };
+		0AC7CD7123D856E20093EC26 /* TableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7CD6723D856E20093EC26 /* TableSection.swift */; };
+		0AC7CD7223D856E20093EC26 /* TableCellAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7CD6823D856E20093EC26 /* TableCellAction.swift */; };
+		0AC7CD7323D856E20093EC26 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7CD6923D856E20093EC26 /* Operators.swift */; };
+		0AC7CD7423D856E20093EC26 /* TableRowAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7CD6A23D856E20093EC26 /* TableRowAction.swift */; };
+		0AC7CD7523D856E20093EC26 /* TablePrototypeCellHeightCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7CD6B23D856E20093EC26 /* TablePrototypeCellHeightCalculator.swift */; };
+		0AC7CD7623D856E20093EC26 /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7CD6C23D856E20093EC26 /* ConfigurableCell.swift */; };
+		0AC7CD7723D856E20093EC26 /* TableDirector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7CD6D23D856E20093EC26 /* TableDirector.swift */; };
+		0AC7CD7823D856E20093EC26 /* TableKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7CD6E23D856E20093EC26 /* TableKit.swift */; };
+		0AC7CD7A23D8590F0093EC26 /* TitleSubtitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7CD7923D8590F0093EC26 /* TitleSubtitleCell.swift */; };
+		0AC7CD7C23D85DF30093EC26 /* DeviceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7CD7B23D85DF30093EC26 /* DeviceViewModel.swift */; };
 		43FCB5AB8FFA4833102E31C6 /* Pods_TrackerMonitor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D774A3B25F1FF5D847AE7DC /* Pods_TrackerMonitor.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +61,18 @@
 		0AC7CD5E23D734720093EC26 /* UIAlertController+Show.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Show.swift"; sourceTree = "<group>"; };
 		0AC7CD6023D734840093EC26 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		0AC7CD6223D734C70093EC26 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		0AC7CD6523D856E20093EC26 /* TableRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableRow.swift; sourceTree = "<group>"; };
+		0AC7CD6623D856E20093EC26 /* TableCellRegisterer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCellRegisterer.swift; sourceTree = "<group>"; };
+		0AC7CD6723D856E20093EC26 /* TableSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableSection.swift; sourceTree = "<group>"; };
+		0AC7CD6823D856E20093EC26 /* TableCellAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCellAction.swift; sourceTree = "<group>"; };
+		0AC7CD6923D856E20093EC26 /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
+		0AC7CD6A23D856E20093EC26 /* TableRowAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableRowAction.swift; sourceTree = "<group>"; };
+		0AC7CD6B23D856E20093EC26 /* TablePrototypeCellHeightCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TablePrototypeCellHeightCalculator.swift; sourceTree = "<group>"; };
+		0AC7CD6C23D856E20093EC26 /* ConfigurableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
+		0AC7CD6D23D856E20093EC26 /* TableDirector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableDirector.swift; sourceTree = "<group>"; };
+		0AC7CD6E23D856E20093EC26 /* TableKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableKit.swift; sourceTree = "<group>"; };
+		0AC7CD7923D8590F0093EC26 /* TitleSubtitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleSubtitleCell.swift; sourceTree = "<group>"; };
+		0AC7CD7B23D85DF30093EC26 /* DeviceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceViewModel.swift; sourceTree = "<group>"; };
 		1D774A3B25F1FF5D847AE7DC /* Pods_TrackerMonitor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrackerMonitor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		22174812871E3D7261138317 /* Pods-TrackerMonitor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrackerMonitor.debug.xcconfig"; path = "Target Support Files/Pods-TrackerMonitor/Pods-TrackerMonitor.debug.xcconfig"; sourceTree = "<group>"; };
 		F0705471407CEDEA66A57DB8 /* Pods-TrackerMonitor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrackerMonitor.release.xcconfig"; path = "Target Support Files/Pods-TrackerMonitor/Pods-TrackerMonitor.release.xcconfig"; sourceTree = "<group>"; };
@@ -112,6 +136,7 @@
 			children = (
 				0AC7CD6023D734840093EC26 /* RootViewController.swift */,
 				0AC7CD3223D4ADBC0093EC26 /* Main.storyboard */,
+				0AC7CD7923D8590F0093EC26 /* TitleSubtitleCell.swift */,
 				0AC7CD6223D734C70093EC26 /* MainViewController.swift */,
 				0AC7CD5B23D71F280093EC26 /* Device */,
 				0AC7CD4B23D4B6210093EC26 /* About */,
@@ -141,6 +166,7 @@
 		0AC7CD4423D4B3830093EC26 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				0AC7CD6423D856E20093EC26 /* TableKit */,
 				0AC7CD5E23D734720093EC26 /* UIAlertController+Show.swift */,
 			);
 			path = Vendors;
@@ -170,8 +196,26 @@
 			isa = PBXGroup;
 			children = (
 				0AC7CD5C23D71F510093EC26 /* DeviceViewController.swift */,
+				0AC7CD7B23D85DF30093EC26 /* DeviceViewModel.swift */,
 			);
 			path = Device;
+			sourceTree = "<group>";
+		};
+		0AC7CD6423D856E20093EC26 /* TableKit */ = {
+			isa = PBXGroup;
+			children = (
+				0AC7CD6523D856E20093EC26 /* TableRow.swift */,
+				0AC7CD6623D856E20093EC26 /* TableCellRegisterer.swift */,
+				0AC7CD6723D856E20093EC26 /* TableSection.swift */,
+				0AC7CD6823D856E20093EC26 /* TableCellAction.swift */,
+				0AC7CD6923D856E20093EC26 /* Operators.swift */,
+				0AC7CD6A23D856E20093EC26 /* TableRowAction.swift */,
+				0AC7CD6B23D856E20093EC26 /* TablePrototypeCellHeightCalculator.swift */,
+				0AC7CD6C23D856E20093EC26 /* ConfigurableCell.swift */,
+				0AC7CD6D23D856E20093EC26 /* TableDirector.swift */,
+				0AC7CD6E23D856E20093EC26 /* TableKit.swift */,
+			);
+			path = TableKit;
 			sourceTree = "<group>";
 		};
 		859785239B6EF91DDF9D09DE /* Pods */ = {
@@ -326,19 +370,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AC7CD7223D856E20093EC26 /* TableCellAction.swift in Sources */,
+				0AC7CD7323D856E20093EC26 /* Operators.swift in Sources */,
 				0AC7CD5123D4B6620093EC26 /* AddDeviceViewModel.swift in Sources */,
+				0AC7CD7423D856E20093EC26 /* TableRowAction.swift in Sources */,
+				0AC7CD7823D856E20093EC26 /* TableKit.swift in Sources */,
+				0AC7CD7523D856E20093EC26 /* TablePrototypeCellHeightCalculator.swift in Sources */,
 				0AC7CD4623D4B4EB0093EC26 /* DeviceListViewController.swift in Sources */,
+				0AC7CD7123D856E20093EC26 /* TableSection.swift in Sources */,
+				0AC7CD7023D856E20093EC26 /* TableCellRegisterer.swift in Sources */,
 				0AC7CD3123D4ADBC0093EC26 /* AboutViewController.swift in Sources */,
 				0AC7CD5723D4B8B30093EC26 /* DeviceManager.swift in Sources */,
 				0AC7CD5523D4B7EA0093EC26 /* DeviceCell.swift in Sources */,
 				0AC7CD5323D4B7370093EC26 /* Device.swift in Sources */,
+				0AC7CD7623D856E20093EC26 /* ConfigurableCell.swift in Sources */,
 				0AC7CD4923D4B59A0093EC26 /* R.generated.swift in Sources */,
 				0AC7CD4F23D4B6570093EC26 /* DeviceListViewModel.swift in Sources */,
 				0AC7CD5D23D71F520093EC26 /* DeviceViewController.swift in Sources */,
+				0AC7CD6F23D856E20093EC26 /* TableRow.swift in Sources */,
 				0AC7CD6323D734C70093EC26 /* MainViewController.swift in Sources */,
+				0AC7CD7723D856E20093EC26 /* TableDirector.swift in Sources */,
 				0AC7CD5F23D734730093EC26 /* UIAlertController+Show.swift in Sources */,
 				0AC7CD6123D734840093EC26 /* RootViewController.swift in Sources */,
+				0AC7CD7A23D8590F0093EC26 /* TitleSubtitleCell.swift in Sources */,
 				0AC7CD2D23D4ADBC0093EC26 /* AppDelegate.swift in Sources */,
+				0AC7CD7C23D85DF30093EC26 /* DeviceViewModel.swift in Sources */,
 				0AC7CD4D23D4B6430093EC26 /* AddDeviceViewController.swift in Sources */,
 				0AC7CD2F23D4ADBC0093EC26 /* SceneDelegate.swift in Sources */,
 			);
