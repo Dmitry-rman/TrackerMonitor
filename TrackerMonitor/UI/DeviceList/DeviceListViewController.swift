@@ -36,6 +36,9 @@ class DeviceListViewController: UIViewController, UITableViewDelegate, UITableVi
     @objc private func refreshData(_ sender: Any) {
         viewModel.refresh(completion: { [weak self] success in
             self?.refreshControl.endRefreshing()
+            if success == false {
+                RootViewController.sharedInstance.showAlertController(message: "Ошибка при обновлении списка устройств.")
+            }
         })
     }
     
@@ -48,8 +51,9 @@ class DeviceListViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func bind(){
-        self.viewModel.isBusy.bind(to: busyIndicator.reactive.isAnimating)
-        _ = self.viewModel.devices.observeNext { [weak self](result) in
+        self.viewModel.isBusy.map{$0 && self.refreshControl.isRefreshing == false}.bind(to: busyIndicator.reactive.isAnimating)
+        
+        _ = DeviceManager.sharedInstance.devices.observeNext { [weak self](result) in
             self?.tableView.reloadData()
         }
     }
@@ -71,11 +75,20 @@ class DeviceListViewController: UIViewController, UITableViewDelegate, UITableVi
         
         let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.deviceCellID, for: indexPath)!
 
-        let device = viewModel.devices.value[indexPath.row]
-        cell.countLabel.text = "\(device.usageDayCount)"
-        cell.timeLabel.text = "\(device.usageDayTime)"
-        cell.amountLabel.text = ""
-        cell.titleLabel.text = device.name +  " | " + (device.ipAddress ?? "")
+        if let device = viewModel.getDevice(byIndex: indexPath.row){
+            cell.countLabel.text = "\(device.usageDayCount)"
+            cell.timeLabel.text = "\(device.usageDayTime)"
+            cell.amountLabel.text = ""
+            cell.titleLabel.text = device.name +  " | " + (device.ipAddress ?? "")
+            cell.accessoryType = .disclosureIndicator
+        }
+        else{
+            cell.countLabel.text = ""
+            cell.timeLabel.text = ""
+            cell.amountLabel.text = ""
+            cell.titleLabel.text = viewModel.getDeviceIP(byIndex: indexPath.row)
+            cell.accessoryType = .none
+        }
         
         return cell
     }
@@ -87,7 +100,8 @@ class DeviceListViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         if editingStyle == .delete{
-            viewModel.removeDevice(index: indexPath.row)
+            let ip = viewModel.getDeviceIP(byIndex: indexPath.row)
+            viewModel.removeDevice(ip: ip)
         }
     }
     
@@ -101,9 +115,18 @@ class DeviceListViewController: UIViewController, UITableViewDelegate, UITableVi
         
         let deviceController = segue.destination as? DeviceViewController
         if let row = tableView.indexPathForSelectedRow?.row{
-           let device = viewModel.devices.value[row]
+            if let device = viewModel.getDevice(byIndex: row){
                deviceController?.viewModel = DeviceViewModel.init(device: device)
+            }
         }
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+         if let row = tableView.indexPathForSelectedRow?.row{
+            return viewModel.getDevice(byIndex: row) != nil
+         }
+        
+        return true
     }
 
 }

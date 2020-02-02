@@ -12,10 +12,19 @@ import Bond
 class DeviceListViewModel{
     
     let isBusy = Observable<Bool>(false)
-    let devices = DeviceManager.sharedInstance.devices
     
     var deviceCount: Int{
-        return devices.value.count
+        return DeviceManager.sharedInstance.deviceIPs.count
+    }
+    
+    func getDeviceIP(byIndex index: Int) -> String{
+        return DeviceManager.sharedInstance.deviceIPs[index]
+    }
+    
+    func getDevice(byIndex index: Int) -> Device?{
+        
+        let ip = self.getDeviceIP(byIndex: index)
+        return  DeviceManager.sharedInstance.devices.value.filter{$0.ipAddress == ip}.first
     }
     
     init() {
@@ -26,13 +35,11 @@ class DeviceListViewModel{
         self.isBusy.value = true
         DeviceManager.sharedInstance.updateList { [weak self] (results) in
                    self?.isBusy.value = false
-                   completion?(true)
+                   completion?(results != nil)
                }
     }
     
-    func removeDevice(index: Int){
-        
-        let device = DeviceManager.sharedInstance.devices.value[index]
-        _ = DeviceManager.sharedInstance.removeDevice(device: device)
+    func removeDevice(ip: String){
+        _ = DeviceManager.sharedInstance.removeDevice(deviceIP: ip)
     }
 }

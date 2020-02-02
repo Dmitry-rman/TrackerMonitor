@@ -13,6 +13,7 @@ class DeviceViewModel{
     
     private(set) var device = Observable<Device?>(nil)
     private(set) var deviceName = Observable<String>("")
+    let isBusy = Observable<Bool>(false)
     
     init(device: Device) {
         self.device.value = device
@@ -25,6 +26,15 @@ class DeviceViewModel{
               self?.device.value = device
               completion?(device != nil)
            }
+        }
+    }
+    
+    func clearDevice(){
+        if let device = device.value {
+            isBusy.value = true
+            DeviceManager.sharedInstance.clearDevice(device: device) { [weak self](success) in
+                self?.isBusy.value = false
+            }
         }
     }
 }

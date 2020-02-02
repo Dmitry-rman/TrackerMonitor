@@ -11,6 +11,7 @@ import UIKit
 class DeviceViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet var busyIndicator: UIActivityIndicatorView!
     
     var tableDirector: TableDirector!
     
@@ -35,6 +36,8 @@ class DeviceViewController: UIViewController {
         _ = viewModel.device.observeNext {[weak self] (device) in
             self?.reloadTable()
         }
+        
+        viewModel.isBusy.bind(to: busyIndicator.reactive.isAnimating)
     }
     
     @objc private func refreshData(_ sender: Any) {
@@ -60,6 +63,9 @@ class DeviceViewController: UIViewController {
         tableDirector.reload()
     }
     
+    @IBAction func clear(_ sedner: Any){
+        viewModel.clearDevice()
+    }
 
     /*
     // MARK: - Navigation

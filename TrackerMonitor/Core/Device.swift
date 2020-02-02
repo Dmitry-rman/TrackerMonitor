@@ -13,4 +13,11 @@ class Device : Decodable{
     let usageDayCount: Int
     var name: String
     var ipAddress: String?
+    
+    init(ip: String){
+        ipAddress = ip
+        usageDayTime = 0
+        usageDayCount = 0
+        name = ""
+    }
 }
