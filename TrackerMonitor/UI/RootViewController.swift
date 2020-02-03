@@ -19,6 +19,7 @@ class RootViewController: UIViewController {
     
     private var current: UIViewController
     private(set) public var mainViewController: MainViewController?
+    var windowsScene: UIWindowScene?
     
     static let sharedInstance = RootViewController()
     
@@ -163,8 +164,13 @@ class RootViewController: UIViewController {
                 presentController.present(alertController, animated: animated ?? true, completion:  nil)
             }
             else{
+                if windowsScene != nil {
+                    alertController.show(animated ?? true, windowScene: windowsScene!)
+                }
+                else{
+                    alertController.show(animated ?? true)
+                }
                 
-                alertController.show(animated ?? true)
             }
         }
 

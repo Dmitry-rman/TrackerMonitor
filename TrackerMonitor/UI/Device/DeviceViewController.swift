@@ -64,7 +64,16 @@ class DeviceViewController: UIViewController {
     }
     
     @IBAction func clear(_ sedner: Any){
-        viewModel.clearDevice()
+        RootViewController.sharedInstance.showDialogController(title: "Очистить",
+                                                               message: "Вы действительно хоитите очистить результаты замеров?",
+                                                               cancel: {
+                                                                
+        },
+                                                               success: { [weak self] in
+                                                                  self?.viewModel.clearDevice()
+        },
+                                                               animated: true)
+       
     }
 
     /*

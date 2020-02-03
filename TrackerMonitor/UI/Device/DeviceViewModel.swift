@@ -33,7 +33,9 @@ class DeviceViewModel{
         if let device = device.value {
             isBusy.value = true
             DeviceManager.sharedInstance.clearDevice(device: device) { [weak self](success) in
-                self?.isBusy.value = false
+                self?.refresh(completion: { (success) in
+                    self?.isBusy.value = false
+                })
             }
         }
     }
