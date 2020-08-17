@@ -14,10 +14,11 @@ pod 'UserDefaultsStore'
 pod 'UITextView+Placeholder'
 pod 'CodableAlamofire'
 pod 'DateToolsSwift'
+pod 'Alamofire', "~> 4.8" 
 pod 'AlamofireNetworkActivityLogger'
 #pod 'Nuke'
 pod 'CocoaLumberjack/Swift'
-pod 'Bond'
+pod 'Bond', "~> 7.6"
 pod 'R.swift'
 end
 
